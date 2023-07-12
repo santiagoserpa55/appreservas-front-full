@@ -8,6 +8,7 @@ export class Reservas {
   tipo_reserva: string;
   cantidad_personas: number;
   estado: string;
+  observaciones: string;
   id_reserva: string;
 
   constructor(
@@ -20,6 +21,7 @@ export class Reservas {
     tipo_reserva: string,
     cantidad_personas: number,
     estado: string,
+    observaciones: string,
     id_reserva: string
   ) {
     this.nombres = nombres;
@@ -31,6 +33,7 @@ export class Reservas {
     this.tipo_reserva = tipo_reserva;
     this.cantidad_personas = cantidad_personas;
     this.estado = estado;
+    this.observaciones = observaciones;
     this.id_reserva = id_reserva;
   }
 }

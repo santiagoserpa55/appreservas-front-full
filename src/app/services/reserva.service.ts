@@ -9,6 +9,11 @@ import { Reservas } from "../models/Reservas";
 
 export class ReservaService {
 
+  getReservasById(id: string) {    
+    const url = `${this.baseUrl}api/v1/reservas/filtrarId?id=${id}`;
+    return this.http.get<Reservas[]>(url);
+  }
+
   private baseUrl = environment.serviceURL;
   constructor(private http: HttpClient) { }
 

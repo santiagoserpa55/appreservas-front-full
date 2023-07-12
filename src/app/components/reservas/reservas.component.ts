@@ -45,8 +45,9 @@ throw new Error('Method not implemented.');
 
   ngAfterViewInit() {}
 
-  editarReserva(id: string) {
-    this.router.navigate(["/edit-reservas"], {queryParams:{id: id}})
+  //desde aqui paso el param al component edit-reservas.component.ts
+  editarReserva(identificacion: string) {
+    this.router.navigate(["/edit-reservas"], {queryParams:{identificacion: identificacion}})
   }
 
   volver() {

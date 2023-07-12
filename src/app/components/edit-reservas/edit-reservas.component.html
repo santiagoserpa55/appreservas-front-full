@@ -37,11 +37,10 @@
                       formControlName="identificacion"
                       type="text"
                       id="identificacion"
-                      placeholder="Identificacion"
+                      placeholder="Identificación"
                     />
                   </div>
                 </div>
-
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="nombres">Nombres</label>
@@ -79,25 +78,12 @@
                     />
                   </div>
                 </div>
-
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input
-                      class="form-control"
-                      formControlName="password"
-                      type="password"
-                      id="password"
-                      placeholder="Contraseña"
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </fieldset>
         </form>
 
-        <form action method="post" [formGroup]="editFormFormReservas">
+        <form action method="post" [formGroup]="editFormReserva">
           <fieldset class="form-group border p-3">
             <legend class="w-auto px-2">Datos de la reserva</legend>
             <div class="row justify-content-center">
@@ -132,19 +118,33 @@
                 </div>
               </div>
             </div>
-
-            <div class="col-md-12">
-              <div class="form-group">
-                <label for="cantidadPersonas">Cantidad de personas</label>
-                <input
-                  class="form-control"
-                  formControlName="cantidadPersonas"
-                  type="number"
-                  id="cantidadPersonas"
-                  placeholder="Cantidad de personas"
-                />
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cantidadPersonas">Cantidad de personas</label>
+                  <input
+                    class="form-control"
+                    formControlName="cantidadPersonas"
+                    type="number"
+                    id="cantidadPersonas"
+                    placeholder="Cantidad de personas"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cantidadPersonas">Estado</label>
+                  <input
+                    class="form-control"
+                    formControlName="estado"
+                    type="text" readonly
+                    id="cantidadPersonas"
+                    placeholder="Estado"
+                  />
+                </div>
               </div>
             </div>
+
             <div class="col-md-12">
               <div class="form-group">
                 <label for="observaciones">Observaciones</label>
@@ -160,21 +160,14 @@
         </form>
 
         <div class="row justify-content-center mt-4">
-          <div class="col-md-2">
+          <div class="col-md-3">
             <button class="btn btn-primary" (click)="editUsuario()">
-              Registrar
+              Actualizar Información
             </button>
-            <div
-              class="alert alert-success"
-              role="alert"
-              *ngIf="showConfirmation"
-            >
-              Solicitado
-            </div>
           </div>
           <div class="col-md-2">
             <button class="btn btn-primary" (click)="confirmar()">
-              Confirmar
+              Confirmar Reserva
             </button>
           </div>
         </div>
