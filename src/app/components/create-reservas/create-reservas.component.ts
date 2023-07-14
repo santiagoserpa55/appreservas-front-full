@@ -70,16 +70,14 @@ export class CreateReservasComponent implements OnInit {
       this.idArray.length === 0 ||
       !this.idArray.includes(formData.identificacion)
     ) {
-      console.log('Se registrara el usuario');
+      //console.log('Se registrara el usuario');
       this.usuarioService.crearUsuario(formData).subscribe(
         (idUsuario: number) => {
           this.showConfirmation = true;
           this.idUsuarioCreado = idUsuario;
-          console.log('ESTE ES EL ID: ' + this.idUsuarioCreado);
+/*           console.log('ESTE ES EL ID: ' + this.idUsuarioCreado);
           console.log('aqui debajo imprimire los datos de la rserva');
-          console.log(formDataRes);
-          
-        
+          console.log(formDataRes); */
           const reservaData = {
             idReserva: '',
             fechaReserva: formDataRes.fechaReserva,
@@ -100,7 +98,6 @@ export class CreateReservasComponent implements OnInit {
       console.log('No se registro el usuario');
     }
   }
-
 
   onSubmit(): void {
     if (this.createForm.invalid) {

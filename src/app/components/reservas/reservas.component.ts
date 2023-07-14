@@ -38,7 +38,6 @@ throw new Error('Method not implemented.');
     this.reservaService.getReservas().subscribe((response) => {
       this.reservas = response;
       this.dataSource = new MatTableDataSource<Reservas>(this.reservas);
-      console.log(this.reservas);
       this.dataSource.paginator = this.paginator;
     });
   }
